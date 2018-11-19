@@ -5,7 +5,7 @@ services:
   server:
     build: .
     ports:
-      - '8088:80'
+      - '8088:4567'
     image: server
     container_name: webserver_7
     networks:
