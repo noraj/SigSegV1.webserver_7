@@ -4,6 +4,7 @@ require 'sqlite3'
 configure do
   set :public_folder, 'public'
   set :views, 'views'
+  set :bind, '0.0.0.0'
   enable :sessions
   #disable :protection
   set :session_secret, '8e619d29a7646692e6f3642c4ec29be892d8ed53a77a7271e02bcde6620b807be1eb26b76ca7cc83a39bc0f19dba5a281c29ce7a255d7b699be32df2e82b37c1'

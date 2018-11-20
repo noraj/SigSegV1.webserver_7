@@ -5,7 +5,7 @@ services:
   server:
     build: .
     ports:
-      - '8088:4567'
+      - '4567:4567'
     image: server
     container_name: webserver_7
     networks:
@@ -17,5 +17,5 @@ networks:
   server:
     driver: bridge
     driver_opts:
-      com.docker.network.bridge.enable_ip_masquerade: "true" # besoin internet
+      com.docker.network.bridge.enable_ip_masquerade: "true"
       com.docker.network.bridge.name: "webserver_7"
