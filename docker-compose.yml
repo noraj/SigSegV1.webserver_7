@@ -6,7 +6,7 @@ services:
     build: .
     ports:
       - '4567:4567'
-    image: server
+    image: webserver_7
     container_name: webserver_7
     networks:
       server:
