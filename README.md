@@ -43,7 +43,7 @@ This challenge require a Docker Engine and Docker Compose. (Contact author if yo
 Builds, (re)creates, starts, and attaches to containers for a service:
 
 ```
-$ docker-compose up --build server
+$ docker-compose up --build webserver_7
 ```
 
 Add `-d` if you want to detach the container.
