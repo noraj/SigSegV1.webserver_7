@@ -14,7 +14,7 @@ RUN chmod 773 /tmp
 RUN ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime
 RUN dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt update && apt install -y ruby2.3 ruby2.3-dev sqlite3 libsqlite3-dev cmake openssl libssl-dev g++
+RUN apt update && apt install -y ruby2.3 ruby2.3-dev sqlite3 libsqlite3-dev cmake openssl libssl-dev g++ netcat
 # install dependencies
 RUN gem install sinatra thin sqlite3
 
