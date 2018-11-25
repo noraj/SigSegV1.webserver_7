@@ -14,7 +14,7 @@ RUN chmod 773 /tmp
 RUN ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime
 RUN dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt update && apt install -y ruby2.3 ruby2.3-dev sqlite3 libsqlite3-dev cmake openssl libssl-dev g++ netcat
+RUN apt update && apt install -y ruby2.3 ruby2.3-dev sqlite3 libsqlite3-dev cmake openssl libssl-dev g++
 # install dependencies
 RUN gem install sinatra thin sqlite3
 
@@ -31,8 +31,5 @@ COPY ./views /usr/src/app/views
 WORKDIR /usr/src/app
 
 EXPOSE 4567
-
-# Run a really basic health check which makes sure the port is open.
-HEALTHCHECK CMD /usr/bin/nc 127.0.0.1 4567 < /dev/null || exit 1
 
 CMD ruby ./webserver.rb
